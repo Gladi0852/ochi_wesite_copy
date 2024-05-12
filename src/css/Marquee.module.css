@@ -1,0 +1,57 @@
+@font-face {
+  font-family: FoundersBold;
+  src: url(../Font/FoundersGroteskXCond-Bold.otf);
+}
+.container {
+  /* position: relative; */
+  width: 100vw;
+  background-color: #008976;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  padding: 7rem 0;
+  margin-top: 2vw;
+  z-index: 1;
+}
+.container h1 {
+  font-family: FoundersBold;
+  font-size: 27vw;
+  color: #fff;
+  /* margin-bottom: -10vw; */
+  line-height: 10vw;
+  margin-top: 10vw;
+}
+.scrollerCont {
+  display: flex;
+  /* dont use gap property or the animation will animate with some glitch */
+  /* gap: 2.5vw; */
+  border-top: 1px solid #a9e8df;
+  border-bottom: 1px solid #a9e8df;
+  white-space: nowrap;
+  position: relative;
+}
+.scroller {
+  display: flex;
+  gap: 1vw;
+  animation: scroll 8s linear infinite;
+}
+.scroller h1:last-child {
+  margin-right: 3vw;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* responsive start */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 4.5rem 0;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+}

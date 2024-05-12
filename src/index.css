@@ -1,0 +1,19 @@
+@font-face {
+  font-family: regular;
+  src: url(./Font/NeueMontreal-Regular.otf);
+}
+:root {
+  font-family: regular;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  display: none;
+}

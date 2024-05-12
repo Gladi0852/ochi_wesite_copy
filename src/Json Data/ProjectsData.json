@@ -1,0 +1,47 @@
+[
+  {"id" : 1,
+  "name" : "FYDE",
+  "img" : "ProjectImages/Fyde-photo.png",
+  "tags" : ["AUDIT","COPYWRITING","SALES DECK","SLIDES DESIGN"]
+  },
+  {"id" : 2,
+  "name" : "TRAWA",
+  "img" : "ProjectImages/Trawa-photo.jpg",
+  "tags" : ["BRAND IDENTITY","DESIGN RESEARCH","INVESTOR DECK"]
+  },
+  {"id" : 3,
+  "name" : "PREMIUM BLEND",
+  "img" : "ProjectImages/PREMIUM-BLEND.png",
+  "tags" : ["BRANDED TEMPLATE"]
+  },
+  {"id" : 4,
+  "name" : "PLANETLY",
+  "img" : "ProjectImages/PLANETLY.png",
+  "tags" : ["AGENCY","BIG NEWS DECK","BRANDED TEMPLATE","INVESTOR DECK","POLICY DECK & PLAYBOOK","SALES DECK"]
+  },
+  {"id" : 5,
+  "name" : "BLACK BOOK",
+  "img" : "ProjectImages/BLACK-BOOK.jpg",
+  "tags" : ["INVESTOR DECK","REDESIGN","REVIEW"]
+  },
+  {"id" : 6,
+  "name" : "VISE",
+  "img" : "ProjectImages/VISE.jpg",
+  "tags" : ["AGENCY","COMPANY PRESENTATION"]
+  },
+  {"id" : 7,
+  "name" : "SOFTSTART",
+  "img" : "ProjectImages/SOFTSTART.jpg",
+  "tags" : ["BRANDED TEMPLATE","SALES DECK"]
+  },
+  {"id" : 8,
+  "name" : "OFFICEVIBE",
+  "img" : "ProjectImages/OFFICEVIBE.jpg",
+  "tags" : ["BRANDED TEMPLATE"]
+  },
+  {"id" : 9,
+  "name" : "WORKIZ EASY",
+  "img" : "ProjectImages/WORKIZ-EASY.jpg",
+  "tags" : ["ONBOARDING PRESENTATION","POLICY DECK & PLAYBOOK","SALES DECK"]
+  }
+]

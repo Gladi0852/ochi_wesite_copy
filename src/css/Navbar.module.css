@@ -1,0 +1,173 @@
+.navbar {
+  display: flex;
+  padding: 1.05vw 3.45vw;
+  width: 100vw;
+  justify-content: space-between;
+  color: #fff;
+  position: relative;
+  /* top: 0;
+  left: 0; */
+  /* border: 1px solid red; */
+  /* background-color: blue; */
+  backdrop-filter: blur(5px);
+  z-index: 999;
+}
+.logo {
+  width: 50%;
+}
+.menuItem {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.mainItems {
+  display: flex;
+  gap: 40px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1vw;
+}
+
+.relativePos {
+  position: relative;
+  overflow: hidden;
+  padding: 1vw 0;
+}
+.relativePos a {
+  position: relative;
+  transition: top 0.3s;
+  top: 0;
+}
+.absPos {
+  position: absolute;
+  top: 120%;
+  width: max-content;
+  transform: translateY(-50%);
+  transition: top 0.3s;
+}
+.relativePos::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  bottom: 5px;
+  left: unset;
+  margin-top: 5px;
+  right: 0;
+  transition: width 0.3s;
+}
+
+/* reponsive start */
+.hambargerMenu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2px 0;
+  /* border: 1px solid red; */
+  width: 35px;
+  position: relative;
+}
+.line1,
+.line2,
+.line3 {
+  width: 100%;
+  height: 5px;
+  background-color: #bababa;
+  border-radius: 1rem;
+}
+
+.hambargerMenu input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+.hambargerMenu input:checked ~ .line1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.hambargerMenu input:checked ~ .line2 {
+  display: none;
+}
+.hambargerMenu input:checked ~ .line3 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+@media (min-width: 1024px) {
+  .relativePos:hover::after {
+    right: unset;
+    left: 0;
+    width: 100%;
+  }
+  .contact .relativePos:hover a {
+    top: -5vw;
+  }
+  .contact .relativePos:hover .absPos a {
+    top: unset;
+  }
+  .relativePos:hover a {
+    /* top: -2.45vw; */
+    top: -200%;
+  }
+  .relativePos:hover .absPos {
+    top: 50%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1400px) {
+  .navbar a {
+    font-size: 1.4vw;
+  }
+}
+@media (max-width: 1023px) {
+  .hambargerMenu {
+    display: flex;
+    z-index: 99;
+  }
+  .menuItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0;
+    right: -50%;
+    padding-top: 50px;
+    padding-left: 7vw;
+    height: 100vh;
+    width: 35vw;
+    z-index: 98;
+    background-color: #ffffff51;
+    transition: right 0.5s;
+  }
+  .mainItems {
+    flex-direction: column;
+    gap: 0;
+    width: 20vw;
+  }
+  .menuItem a {
+    font-size: 2vw;
+    cursor: pointer;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .navbar a {
+    font-size: 2.6vw;
+  }
+}
+@media (max-width: 480px) {
+  .navbar a {
+    font-size: 3.5vw;
+  }
+  .hambargerMenu {
+    width: 30px;
+  }
+}

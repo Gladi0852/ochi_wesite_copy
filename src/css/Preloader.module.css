@@ -1,0 +1,56 @@
+@font-face {
+  font-family: FoundersBold;
+  src: url(../Font/FoundersGroteskXCond-Lt.otf);
+}
+.loderMain {
+  background-color: #ffffff4d;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+.loader {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 999;
+  position: fixed;
+  padding: 0 3.45vw;
+}
+.container {
+  margin-top: 10vw;
+  margin-bottom: 8.5vw;
+  /* border: 1px solid blue; */
+}
+.content {
+  width: 50%;
+  /* border: 1px solid blue; */
+}
+.content h1 {
+  color: #fff;
+  font-size: 7.5vw;
+  font-family: FoundersBold;
+  letter-spacing: 5px;
+  line-height: 7vw;
+}
+.content h1:nth-child(2) {
+  margin-left: 20px;
+}
+.logo {
+  color: #fff;
+  padding: 1.05vw 0;
+}
+
+.loading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.loading p {
+  color: #fff;
+  font-size: 1.2vw;
+}
+.loading h1 {
+  color: #fff;
+  font-size: 8vw;
+}

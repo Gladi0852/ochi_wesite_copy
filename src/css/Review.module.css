@@ -1,0 +1,381 @@
+.reviewOuterContainer {
+  margin-bottom: 16vw;
+}
+.reviewOuterContainer h2 {
+  color: #fff;
+  font-size: 4vw;
+  font-weight: lighter;
+  padding: 0 3.45vw;
+  margin-bottom: 3vw;
+}
+.reviewOuterContainer hr {
+  border: none;
+  border-top: 0.5px solid #a7a7a7;
+}
+.template {
+  padding: 1.5vw 3.45vw;
+  border-bottom: 0.5px solid #a7a7a7;
+  /* border: 1px solid red; */
+  overflow: hidden;
+  height: 4.5vw;
+  transition: height 1s;
+}
+.shortInfo {
+  color: #fff;
+  font-size: 1.1vw;
+  display: flex;
+  align-items: center;
+}
+.projectSection {
+  width: 50%;
+  display: flex;
+}
+.projectSection p {
+  width: fit-content;
+}
+.clientName {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.name {
+  width: 65%;
+}
+.underline {
+  position: relative;
+  cursor: pointer;
+}
+.underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: var(--underlineHeight, 1px);
+  background-color: #fff;
+  right: 0;
+  bottom: 0;
+}
+.underline:hover::after {
+  animation: hover 0.6s linear;
+}
+
+@keyframes hover {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.projectName {
+  width: 50%;
+}
+.services {
+  width: 50%;
+}
+.services span {
+  display: none;
+  transition: display 1s;
+}
+
+.detailsReviewContainer {
+  color: #fff;
+  display: flex;
+  height: max-content;
+  overflow: hidden;
+}
+
+@keyframes height {
+  from {
+    height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  to {
+    height: 20vw;
+    margin-top: 5vw;
+    margin-bottom: 3vw;
+  }
+}
+.roundedBorder {
+  border: 1px solid #fff;
+  padding: 0.5vw 1vw;
+  border-radius: 2rem;
+  font-size: 1.1vw;
+  transition: background-color 0.3s, color 0.3s;
+}
+.roundedBorder:hover {
+  background-color: #fff;
+  color: #000;
+}
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  margin-top: 5vw;
+  margin-bottom: 3vw;
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+.icon {
+  color: #000;
+  background-color: #fff;
+  padding: 0.5vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1vw;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.roundedBorder:hover ~ .icon {
+  opacity: 1;
+}
+.icon:hover {
+  opacity: 1;
+}
+
+/* //to select previous element, .roundedBorder = previous sibleng & .icon = current hovered element */
+.roundedBorder:has(~ .icon:hover) {
+  background-color: #fff;
+  color: #000;
+}
+
+.clientImage {
+  width: 8vw;
+  height: 8vw;
+  border-radius: 0.8rem;
+  margin-bottom: 1vw;
+}
+.clientImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.8rem;
+}
+.reviewDesc p {
+  font-size: 1.1vw;
+}
+.cards {
+  padding: 0 3.45vw;
+  margin-top: 10vw;
+  display: flex;
+  width: 100%;
+  gap: 1vw;
+}
+.card {
+  height: 48vh;
+  border-radius: 1rem;
+  position: relative;
+}
+.cardBig {
+  background-color: #008976;
+  width: 50%;
+}
+.cardSmall {
+  background-color: #212121;
+  width: 25%;
+}
+.card img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cardBig img {
+  width: 20%;
+}
+.cardSmall img {
+  width: 30%;
+}
+.cardSmall div {
+  border: 1px solid red;
+  position: absolute;
+  left: 2vw;
+  bottom: 2vw;
+  border: 2px solid #fff;
+  border-radius: 2rem;
+  padding: 0.5vw 0.8vw;
+  overflow: hidden;
+  cursor: pointer;
+}
+.cardBig p {
+  position: absolute;
+  left: 2vw;
+  bottom: 2vw;
+  border: 2px solid #cdea68;
+  color: #cdea68;
+  border-radius: 2rem;
+  padding: 0.5vw 0.8vw;
+  font-size: 1vw;
+}
+.cardBig p::before {
+  content: "\00A9";
+}
+.cardSmall p {
+  position: relative;
+  color: #fff;
+  font-size: 1vw;
+  z-index: 5;
+  transition: color 0.3s;
+}
+
+.cardSmall div::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  background-color: #fff;
+  border-radius: 2rem;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  transition: height 0.2s;
+}
+.cardSmall div:hover::after {
+  height: 100%;
+  top: unset;
+  bottom: 0;
+}
+.cardSmall div:hover p {
+  color: #000;
+}
+
+/* responsive start */
+
+@media (max-width: 1400px) {
+  .card p {
+    font-size: 1.2vw;
+  }
+}
+@media (max-width: 1200px) {
+  .template p {
+    font-size: 1.5vw;
+  }
+  .clientImage {
+    width: 8rem;
+    height: 8rem;
+  }
+  .services span {
+    font-size: 1.5vw;
+  }
+  .icon {
+    display: none;
+  }
+  .cards {
+    justify-content: space-between;
+  }
+  .cardBig {
+    width: 32%;
+  }
+  .cardBig p {
+    font-size: 1.4vw;
+  }
+  .cardBig img {
+    width: 30%;
+  }
+  .cardSmall {
+    width: 32%;
+  }
+}
+@media (max-width: 1023px) {
+  .shortInfo {
+    display: flex;
+    justify-content: space-between;
+  }
+  .clientName {
+    width: max-content;
+  }
+  .projectSection {
+    width: 80%;
+  }
+  .template p {
+    font-size: 1.8vw;
+  }
+  .template {
+    height: 6vw;
+  }
+  .detailsReviewContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .detailsReviewContainer .projectSection {
+    flex-direction: column;
+    width: 100%;
+  }
+  .detailsReviewContainer .projectSection .services {
+    width: 100%;
+  }
+  .detailsReviewContainer .clientName {
+    width: 100%;
+  }
+  .detailsReviewContainer .clientName .name {
+    width: 100%;
+  }
+  .detailsReviewContainer .projectSection .innerContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .detailsReviewContainer .projectSection .innerContainer p:first-child {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .clientName .innerContainer {
+    gap: 2rem;
+  }
+  .cards {
+    flex-wrap: wrap;
+    row-gap: 1.3rem;
+  }
+  .card p {
+    font-size: 1.1rem;
+  }
+  .cardBig {
+    width: 100%;
+  }
+  .cardBig img {
+    width: 15%;
+  }
+  .cardSmall {
+    width: 49%;
+  }
+}
+
+@media (max-width: 768px) {
+  .template p {
+    font-size: 1.1rem;
+  }
+  .reviewOuterContainer h2 {
+    font-size: 3rem;
+  }
+  .template {
+    height: 3rem;
+  }
+  .detailsReviewContainer .projectSection .innerContainer .item p {
+    padding: 0.5rem 1rem;
+  }
+}
+@media (max-width: 650px) {
+  .cards {
+    flex-direction: column;
+  }
+  .cardBig img {
+    width: 25%;
+  }
+  .cardSmall {
+    width: 100%;
+  }
+  .card p {
+    padding: 0.5rem 1rem;
+  }
+}
